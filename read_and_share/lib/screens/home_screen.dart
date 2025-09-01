@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final bookProvider = Provider.of<BookProvider>();
+    final bookProvider = Provider.of<BookProvider>(context);
     final books = bookProvider.books;
 
     return Scaffold(
