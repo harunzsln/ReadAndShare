@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:read_and_share/providers/book_provider.dart';
+import 'package:read_and_share/screens/add_book_screen.dart';
+import 'package:read_and_share/screens/book_detail_screen.dart';
+import 'package:read_and_share/widgets/book_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -54,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
               itemBuilder: (context, index) {
                 final b = books[index];
                 return BookCard(
-                  book: b,
+                  bookModel: b,
                   onTap: () {
                     Navigator.push(
                       context,
